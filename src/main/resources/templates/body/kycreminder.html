@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KYC Reminder</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f6f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-wrapper {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .header h2 {
+            color: #2c3e50;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: white;
+            background-color: #e67e22;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+<div class="email-wrapper">
+    <div class="header">
+        <h2>KYC Reminder for <span th:text="${customerName}">User</span></h2>
+    </div>
+
+    <div class="content">
+        <p>Dear <span th:text="${customerName}">User</span>,</p>
+
+        <p>This is a gentle reminder to complete your <span class="highlight">KYC (Know Your Customer)</span> process before <span class="highlight" th:text="${deadline}">[Deadline]</span> to continue uninterrupted services.</p>
+
+        <p>Completing your KYC helps us serve you better and comply with regulatory guidelines.</p>
+
+        <p>You can complete your KYC in just a few minutes by clicking the button below:</p>
+
+        <a class="cta-button" th:href="${kycLink}">Complete KYC Now</a>
+
+        <p>If you've already completed it recently, please ignore this message.</p>
+    </div>
+</div>
+</body>
+</html>

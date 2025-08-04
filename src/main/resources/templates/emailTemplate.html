@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+<div th:utext="${bodyContent}"></div>
+<p>Warm regards,<br/>
+    <em>The XYZ Group</em>
+</p>
+<div class="footer">
+    <p>&copy; 2025 XYZ Group. All rights reserved.</p>
+    <p>Need help? <a href="mailto:support@axyzgroup.com">support@acmebank.com</a></p>
+</div>
+</body>
+</html>

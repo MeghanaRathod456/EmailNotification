@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Closure Confirmation</title>
+</head>
+<body>
+<p>Dear <strong th:text="${customerName}">Customer</strong>,</p>
+
+<p>We’re writing to confirm that your account with <strong> XYZ Group</strong> has been successfully closed as of <strong th:text="${closureDate}">[Closure Date]</strong>.</p>
+
+<p>If you have any pending transactions or unresolved issues, please contact our support team at <a th:href="@{mailto:support@acme.com}">support@acme.com</a>.</p>
+
+<p>Thank you for being with us. We hope to serve you again in the future.</p>
+</body>
+</html>

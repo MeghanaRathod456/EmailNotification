@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Onboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #888888;
+            text-align: center;
+        }
+
+        .steps {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .steps li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="header">
+        <h1>Welcome, <span th:text="${name}">User</span>!</h1>
+    </div>
+    <div class="content">
+        <p>We’re excited to have you onboard. Your journey with us starts now!</p>
+
+        <p>To help you get started, here are a few steps to complete your onboarding process:</p>
+
+        <ul class="steps">
+            <li>✅ Verify your email address</li>
+            <li>📄 Complete your KYC details</li>
+            <li>🔐 Set up your secure password</li>
+            <li>🚀 Explore our dashboard and tools</li>
+        </ul>
+
+        <p>Click the button below to get started:</p>
+
+        <a class="cta-button" th:href="${actionUrl}">Complete Onboarding</a>
+
+        <p>If you have any questions, feel free to reply to this email or contact our support team.</p>
+    </div>
+</div>
+</body>
+</html>

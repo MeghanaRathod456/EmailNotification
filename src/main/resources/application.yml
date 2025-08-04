@@ -1,0 +1,8 @@
+template:
+  path:
+    prefix: templates/body/
+    suffix: .html
+  mapping:
+    1001: kycreminder
+    1002: onboarding
+    1003: offboarding
